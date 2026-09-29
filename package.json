@@ -1,0 +1,1 @@
+{"name":"barpass-prototype","version":"0.1.0","private":true,"type":"module","scripts":{"start":"python3 server.py","dev":"python3 server.py","smoke":"python3 scripts/smoke.py","netlify:build":"echo static-site-ready"},"dependencies":{"@netlify/blobs":"^9.1.2","@supabase/supabase-js":"^2.57.4"},"engines":{"node":">=20","python":"3.x"}}

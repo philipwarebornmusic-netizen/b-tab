@@ -1,0 +1,9 @@
+barpass.db.json
+.env
+.env.*
+!.env.example
+node_modules/
+.netlify/
+.DS_Store
+__pycache__/
+scripts/__pycache__/
