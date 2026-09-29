@@ -63,8 +63,8 @@ async function loadDb() {
     return { ...initialDb(), ...(data?.data || {}) };
   }
 
-  const store = getStore('barpass');
-  const data = await store.get(STATE_KEY, { type: 'json' });
+  const store = getStore({ name: 'barpass', consistency: 'strong' });
+  const data = await store.get(STATE_KEY, { type: 'json', consistency: 'strong' });
   return { ...initialDb(), ...(data || {}) };
 }
 
@@ -77,7 +77,7 @@ async function saveDb(db) {
     return;
   }
 
-  const store = getStore('barpass');
+  const store = getStore({ name: 'barpass', consistency: 'strong' });
   await store.setJSON(STATE_KEY, db);
 }
 
